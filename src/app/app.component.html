@@ -1,4 +1,4 @@
-<div *ngIf="isLoading">
+<div *ngIf="!(heroes | async)">
   Loading...
 </div>
 <div *ngFor="let hero of heroes | async">

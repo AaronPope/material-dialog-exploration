@@ -10,7 +10,6 @@ import { HeroService } from './shared/services/hero.service';
 })
 export class AppComponent implements OnInit{
   // public heroes!: Observable<Hero[]>; // = new Observable<Hero>();
-  public isLoading = true;
   public heroes!: Observable<Hero[]>;
  // = new Observable<Hero>();
   title = 'material-dialog-exploration';
@@ -19,9 +18,5 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.heroes = this.heroService.getHeroes();
-
-    this.heroService.getHeroes().subscribe(() => {
-      this.isLoading = false;
-    });
   }
 }
