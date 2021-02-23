@@ -9,10 +9,7 @@ import { HeroService } from './shared/services/hero.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit{
-  // public heroes!: Observable<Hero[]>; // = new Observable<Hero>();
   public heroes!: Observable<Hero[]>;
- // = new Observable<Hero>();
-  title = 'material-dialog-exploration';
 
   constructor(private heroService: HeroService) { }
 
